@@ -1,0 +1,20 @@
+version: '2.4'
+
+services:
+    web:
+        image: nodered/node-red:latest ###last known working version (tag) :latest-10
+        container_name: nodered
+        ports:
+          - ${TCP}
+        volumes:
+          - %HOME/.trasba/docker/node-red/data:/data
+        restart: always
+        environment:
+          - TZ=${TZ}
+        networks:
+          - swag
+
+networks:
+    letsencrypt:
+      external:
+        name: swag
