@@ -1,7 +1,7 @@
 version: '2.4'
 
 services:
-    web:
+    nodered:
         image: nodered/node-red:latest ###last known working version (tag) :latest-10
         container_name: nodered
         ports:
@@ -15,6 +15,6 @@ services:
           - swag
 
 networks:
-    letsencrypt:
+    swag:
       external:
         name: swag
