@@ -7,7 +7,7 @@ services:
         ports:
           - ${TCP}
         volumes:
-          - %HOME/.trasba/docker/node-red/data:/data
+          - ${HOME}/.trasba/docker/node-red/data:/data
         restart: always
         environment:
           - TZ=${TZ}
